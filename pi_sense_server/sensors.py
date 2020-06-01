@@ -40,7 +40,7 @@ async def read_sensor(sensor):
     if not contents:
         return TempSensorReading(
             sensor, 
-            datetime.datetime.now(),
+            datetime.datetime.now().isoformat(),
             0.0,
             "Read failed"
         )
