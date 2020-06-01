@@ -1,0 +1,14 @@
+[Unit]
+Description=Server for sensor data
+
+[Service]
+Type=simple
+After=nginx.Service
+ExecStart=uvicorn --port 44182 --proxy-headers pi_sense_server.app:app
+
+Restart=always
+WorkingDirectory=/home/tempmon/pi-sense-server/
+User=tempmon
+
+[Install]
+WantedBy=default.target
