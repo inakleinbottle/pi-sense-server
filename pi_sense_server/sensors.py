@@ -10,7 +10,7 @@ import aiofiles
 @dataclasses.dataclass()
 class TempSensorReading:
     id: str
-    read_time: datetime
+    read_time: str
     temperature: float
     status: str
 
